@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    height: 100vh;
+    background-color: royalblue;
+}
+.header nav{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+li {
+    list-style: none;
+    padding: 1rem;
+}
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+}
+section {
+    height: 100vh;
+    background-color: blanchedalmond;
+}
+
+.sticky {
+    position: fixed;
+    background-color: rgba(58, 168, 142, 0.6) !important;
+}
