@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+}
+.header ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header li {
+    padding: 1rem 2rem;
+    list-style: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+header li:hover {
+    background-color: rosybrown;
+}
+.header li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+.section-1, .section-2, .section-3, .section-4{
+    height: 100vh;
+}
+.section-1 {
+    background-color: cadetblue;
+}
+.section-2 {
+    background-color: rgb(164, 58, 79);
+}
+.section-3 {
+    background-color: darkslategrey;
+}
+.section-4 {
+    background-color: seagreen;
+}
