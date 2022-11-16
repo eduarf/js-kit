@@ -5,10 +5,10 @@ const callBack = (entries) => {
         if(entry.isIntersecting){
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'scale(1)';
-        }
-        else {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'scale(0)';
+            // Unobserve elemanlar bir kez gözlemlendikten sonra 2. kez gözlemlemez 
+            // bu sayede performansı arttırırız 
+            // ancak tekrar tekrar gözlemlenecek bir durum söz konusu ile kullanılmamalıdır.
+            observer.unobserve(entry.target);
         }
     });
 };
