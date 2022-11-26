@@ -19,9 +19,33 @@ if(navigator.geolocation){
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+        /*
+        // harita başlar başlamaz işaretleme yapmasını istemiyorum onun için yoruma aldım burayı
+        aşağıya yapıştırdım çünkü tıklanılan yeri işaretlemesisni istiyorum.
         L.marker(coords).addTo(map)
         .bindPopup('işte buradasın!')
         .openPopup();
+        */
+
+        // haritanın üzerine tıklayınca tıklanan konuma erişeceğiz
+        // bunu leaflet kütüphanesinin verdiği on methodu ile yapabiliriz.
+        map.on('click',function(mapEvent){
+            // map event içinde bulunan latlng bize lat ve lng olarak enlem ve boylam değerlerini verir.
+            const {lat, lng} = mapEvent.latlng;
+            L.marker([lat, lng]).addTo(map)
+            .bindPopup(L.popup({
+                // bu kısım için daha fazla bilgi dökümantosyonda
+                maxWidth: 200,
+                minWidth: 100,
+                closeOnClick: false,
+                autoClose: false,
+                //className: 'popup',
+                // closeButton: false,
+            }))
+            .setPopupContent('Burayı İşaretledin!')
+            .openPopup();
+            
+        });
     }, function(){  
         alert('Neden izin vermedin bana :/')
     });
