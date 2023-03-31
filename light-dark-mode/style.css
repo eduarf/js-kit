@@ -9,18 +9,18 @@ body {
     place-items: center;
 }
 html {
-    --color-primary: hsl(214, 78%, 42%);
-    --color-secondary: hsl(289, 59%, 51%);
-    --color-tertiary: hsl(185, 36%, 47%);
+    --color-primary: #eff0f3;
+    --color-secondary: #ff8e3c;
+    --color-tertiary: #d9376e;
     --color-quaternary: rgb(255, 235, 153);
     --color-quinary: white;
 }
 
 html[theme-mode="dark"] {
-    --color-primary: rgb(36, 38, 43);
-    --color-secondary: hsl(214, 78%, 42%);
-    --color-tertiary: rgb(38, 52, 65);
-    --color-quaternary: hsl(220, 10%, 28%);
+    --color-primary:  #0f0e17;  
+    --color-secondary: #2a9d8f;
+    --color-tertiary: #e9c46a;
+    --color-quaternary: #e76f51;
     --color-quinary: white;
 }
 body {
