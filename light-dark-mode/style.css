@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+html {
+    --color-primary: hsl(214, 78%, 42%);
+    --color-secondary: hsl(289, 59%, 51%);
+    --color-tertiary: hsl(185, 36%, 47%);
+    --color-quaternary: rgb(255, 235, 153);
+    --color-quinary: white;
+}
+
+html[theme-mode="dark"] {
+    --color-primary: rgb(36, 38, 43);
+    --color-secondary: hsl(214, 78%, 42%);
+    --color-tertiary: rgb(38, 52, 65);
+    --color-quaternary: hsl(220, 10%, 28%);
+    --color-quinary: white;
+}
+body {
+    background-color: var(--color-primary);
+}
+.container {
+    display: flex;
+    gap: 1rem;
+    width: 12rem;
+    flex-wrap: wrap;
+}
+.div-1 {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-quinary);
+}
+.div-2 {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-secondary);
+}
+.div-3 {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-tertiary);
+}
+.div-4 {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-quaternary);
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+}
+.toggle {
+    position: relative;
+    width: 6rem;
+    height: 3rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: black;
+    border-radius: 2.5rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: all .4s ease-in-out;
+}
+.toggle:checked{
+    background-color: #1d9828;
+}
+.toggle::before,
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: .65rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: all .4s ease-in-out;
+}
+.toggle::before {
+    left: .5rem;
+}
+.toggle::after {
+    right: .5rem;
+}
+.toggle:checked::before {
+    left: 36.5%;
+    box-shadow: none;
+}
+.toggle:checked::after {
+    right: 36.5%;
+    box-shadow: none;
+}
+
+html.transition,
+html.transition *,
+html.transition::before,
+html.transition::after {
+    transition: all 0.5s !important;
+    transition-delay: 0 !important;
+}
