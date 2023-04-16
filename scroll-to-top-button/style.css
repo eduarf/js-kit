@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-1 {
+    height: 100vh;
+    background-color: #082567;
+}
+
+.section-2 {
+    height: 100vh;
+    background-color: #cd5c5c;
+}
+
+.section-3 {
+    height: 100vh;
+    background-color: #01796f;
+}
+
+.section-4 {
+    height: 100vh;
+    background-color: #706de2;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 45rem;
+    right: 4rem;
+    height: 4rem;
+    width: 4rem;
+    background-color: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 3rem;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.scroll.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 4rem;
+}
